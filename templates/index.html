@@ -17,40 +17,40 @@
 			
 			<!-- Number of Children -->
 			<label for="children"><b>Number of Children:</b></label>
-			<input type="text" name="children" placeholder="for none, type 0" required="required" />
+			<input type="number" name="cnt_children" placeholder="for none, type 0" required="required" />
 			
 			<!-- Income -->
 			<p><label for="income"><b>Income (USD):</b></label>
-			<input type="text" name="income" placeholder="no commas (Ex. 50000)" required="required" /></p>
+			<input type="number" name="amt_income_total" placeholder="no commas (Ex. 50000)" required="required" /></p>
 
 			<!-- Number of Family Members -->
 			<p><label for="family_members"><b>Family Size</b></label>
-				<input type="text" name="income" placeholder="(including yourself)" required="required" /></p>
+				<input type="number" name="cnt_fam_members" placeholder="(including yourself)" required="required" /></p>
 
 			<!-- Gender (F)-->
 			<p><b>Gender:</b></p>
-			<input type="radio" id="female" name="gender" value="0" required="required" />
+			<input type="radio" id="female" name="code_gender_M" value=0 required="required" />
 			<label for="female">Female</label>
 			<!-- Gender (M)-->
-			<input type="radio" id="male" name="gender" value="1" required="required" />
+			<input type="radio" id="male" name="code_gender_M" value=1 required="required" />
 			<label for="male">Male</label>
 			<br>
 
 			<!-- Own Car (N)-->
 			<p><b>Own Car:</b></p>
-			<input type="radio" id="no" name="car" value="1" required="required" />
+			<input type="radio" id="no" name="flag_own_car_Y" value=1 required="required" />
 			<label for="car">No</label>
 			<!-- Own Car (Y)-->
-			<input type="radio" id="no" name="car" value="0" required="required" />
+			<input type="radio" id="no" name="flag_own_car_Y" value=0 required="required" />
 			<label for="male">Yes</label>
 			<br>			
 		
-			<!-- Own Car (N)-->
+			<!-- Own Realty (N)-->
 			<p><b>Own Realty:</b></p>
-			<input type="radio" id="no" name="realty" value="1" required="required" />
+			<input type="radio" id="no" name="flag_own_realty_Y" value=1 required="required" />
 			<label for="no">No</label>
-			<!-- Own Car (Y)-->
-			<input type="radio" id="yes" name="realty" value="0" required="required" />
+			<!-- Own Realty (Y)-->
+			<input type="radio" id="yes" name="flag_own_realty_Y" value=0 required="required" />
 			<label for="yes">Yes</label>
 			<br>
 			</fieldset>

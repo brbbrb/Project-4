@@ -1,6 +1,7 @@
 import numpy as np
 from flask import Flask, request, jsonify, render_template
 import joblib
+import pandas as pd
 
 app = Flask(__name__)
 model = joblib.load("CreditRiskModel.h2")
@@ -14,7 +15,19 @@ def predict():
 	'''
 	for rendering results on HTML
 	'''	
-	features = [int(x) for x in request.form.values()]
+	
+	# ImmutableMultiDict([('children', '3'), ('income', '20000'), ('income', '3'), ('gender', '1'), ('car', '0'), ('realty', '0')])
+	# print(request.form)
+
+	# print(pd.DataFrame(request.form.to_dict()))
+	data = dict((key, request.form.getlist(key)) for key in request.form.keys())
+
+	print(data)
+	# features = [int(x) for x in request.form.values()]
+	features = pd.DataFrame(data)
+	print(features)
+
+	# rename names to the names of the 
 
 	# re-arranging the list as per data set
 	# feature_list = [features[4]] + features[:4] + features[5:11][::-1] + features[11:17][::-1] + features[17:][::-1]
@@ -29,9 +42,9 @@ def predict():
 
 	result = ""
 	if prediction == 1:
-		result = "The credit card holder will be Defaulter in the next month"
+		result = "The credit card application will be *ACCEPTED*"
 	else:
-		result = "The Credit card holder will not be Defaulter in the next month"
+		result = "The credit card application will be *REJECTED*"
 
 	return render_template('index.html', prediction_text = result)
 
