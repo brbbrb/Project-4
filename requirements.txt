@@ -1,14 +1,7 @@
-django
-gunicorn
-django-heroku
 numpy
 flask
+joblib
 pandas
 numpy
-matplotlib
 sklearn
-imblearn
-seaborn
-psycopg2
-sqlalchemy
-joblib
+gunicorn
