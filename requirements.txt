@@ -9,7 +9,6 @@ matplotlib
 sklearn
 imblearn
 seaborn
-itertools
 psycopg2
 sqlalchemy
 joblib
