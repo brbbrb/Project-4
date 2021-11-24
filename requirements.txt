@@ -8,7 +8,6 @@ numpy
 matplotlib
 sklearn
 imblearn
-warnings
 seaborn
 itertools
 psycopg2
