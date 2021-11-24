@@ -17,12 +17,14 @@ def predict():
 	features = [int(x) for x in request.form.values()]
 
 	# re-arranging the list as per data set
-	feature_list = [features[4]] + features[:4] + features[5:11][::-1] + features[11:17][::-1] + features[17:][::-1]
-	features_arr = [np.array(feature_list)]
+	# feature_list = [features[4]] + features[:4] + features[5:11][::-1] + features[11:17][::-1] + features[17:][::-1]
+	# features_arr = [np.array(feature_list)]
 
-	prediction = model.predict(features_arr)
+	# prediction = model.predict(features_arr)
+	prediction = model.predict(features)
 
-	print(features_arr)
+
+	print(features)
 	print("prediction value: ", prediction)
 
 	result = ""
