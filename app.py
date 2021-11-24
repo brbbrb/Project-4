@@ -41,10 +41,10 @@ def predict():
 	print("prediction value: ", prediction)
 
 	result = ""
-	if prediction == 1:
-		result = "The credit card application will be *ACCEPTED*"
+	if prediction == "low_risk":
+		result = "The credit card application is likely to be ACCEPTED"
 	else:
-		result = "The credit card application will be *REJECTED*"
+		result = "The credit card application is likely to be REJECTED"
 
 	return render_template('index.html', prediction_text = result)
 
