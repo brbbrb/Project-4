@@ -42,9 +42,9 @@ def predict():
 
 	result = ""
 	if prediction == "low_risk":
-		result = "The credit card application is likely to be ACCEPTED"
+		result = "The credit card application is likely to be APPROVED*"
 	else:
-		result = "The credit card application is likely to be REJECTED"
+		result = "The credit card application is likely to be DENIED*"
 
 	return render_template('index.html', prediction_text = result)
 

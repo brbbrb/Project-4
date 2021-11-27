@@ -4,67 +4,121 @@
 <head>
 
   <meta charset="UTF-8">
-  <title>Credit Card Approval</title>
+  <title >Credit Card Approval</title>
   
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 <body background="static/cc_background_falling.jpg">
  <div class="predict">
-	<h2 style="margin: auto; width: 35%; padding: 1%; border: 2px solid; text-align: center;">Credit Card Acceptance Prediction</h2>
-<br>
-
-     <!-- Main Input For Receiving Query to our ML -->
-    <form action="{{ url_for('predict')}}"method="post">
-		<fieldset style="float:left;height: 390px;">
-			
-			<!-- Number of Children -->
-			<label for="children"><b>Number of Children:</b></label>
-			<input type="number" name="cnt_children" placeholder="for none, type 0" required="required" />
-			
-			<!-- Income -->
-			<p><label for="income"><b>Income (USD):</b></label>
-			<input type="number" name="amt_income_total" placeholder="no commas (Ex. 50000)" required="required" /></p>
-
-			<!-- Number of Family Members -->
-			<p><label for="family_members"><b>Family Size</b></label>
-				<input type="number" name="cnt_fam_members" placeholder="(including yourself)" required="required" /></p>
-
-			<!-- Gender (F)-->
-			<p><b>Gender:</b></p>
-			<input type="radio" id="female" name="code_gender_M" value=0 required="required" />
-			<label for="female">Female</label>
-			<!-- Gender (M)-->
-			<input type="radio" id="male" name="code_gender_M" value=1 required="required" />
-			<label for="male">Male</label>
-			<br>
-
-			<!-- Own Car (N)-->
-			<p><b>Own Car:</b></p>
-			<input type="radio" id="no" name="flag_own_car_Y" value=0 required="required" />
-			<label for="car">No</label>
-			<!-- Own Car (Y)-->
-			<input type="radio" id="no" name="flag_own_car_Y" value=1 required="required" />
-			<label for="male">Yes</label>
-			<br>			
-		
-			<!-- Own Realty (N)-->
-			<p><b>Own Realty:</b></p>
-			<input type="radio" id="no" name="flag_own_realty_Y" value=0 required="required" />
-			<label for="no">No</label>
-			<!-- Own Realty (Y)-->
-			<input type="radio" id="yes" name="flag_own_realty_Y" value=1 required="required" />
-			<label for="yes">Yes</label>
-			<br>
-			</fieldset>
-		
-		<br>
-		<div style="text-align:center;">
-			<button type="submit" class="btn btn-primary btn-block btn-large"><b>Predict</b></button>
+	
+	<!-- Navbar -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a class="navbar-brand" href="#">Credit Card Approval</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		  <span class="navbar-toggler-icon"></span>
+		</button>
+	  
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		  <ul class="navbar-nav mr-auto">
+			<li class="nav-item active">
+			  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="#">Link</a>
+			</li>
+			<li class="nav-item dropdown">
+			  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				Dropdown
+			  </a>
+			  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+				<a class="dropdown-item" href="#">Action</a>
+				<a class="dropdown-item" href="#">Another action</a>
+				<div class="dropdown-divider"></div>
+				<a class="dropdown-item" href="#">Something else here</a>
+			  </div>
+			</li>
+		  </ul>
 		</div>
-    </form>
-	<br>
-	<div class="result" align="center">
-		{% if prediction_text %}
-			<p style="padding: 0.5%"><b>{{ prediction_text }}</b></p>
-		{% endif %}	
+	  </nav>	
+
+	  <br>
+
+     <!-- Title -->
+	<div style="margin: auto; padding: 1%; text-align: center; color: white; font-weight: bold; text-shadow: 2px 2px #000000"><h1><b>CREDIT CARD APPROVAL PREDICTION</b></h1></div>
+	<!-- background-color: white; opacity: 0.9; -->
+
+	<div class="row justify-content-center">
+
+		<div class="col-md-auto" style= "margin-top: 10px">
+			<div class="result">
+				{% if prediction_text %}
+					<h2 style="padding: 3%; background-color: #ffffff; opacity: 0.9; text-align:center"><b>{{ prediction_text }}</b></h2>
+					<h5 style="background-color: #ffffff; opacity: 0.9; text-align:center">*This is only a prediction based on machine learning, and should not be taken as actual financial advice.</h5>
+				{% endif %}	
+			</div>
+		</div>
+
+	</div>
+
+	<div class="row justify-content-center">
+
+		<div class="col-auto" style="background-color: white; opacity: 0.9; margin-top: 10px">
+
+			<br>
+
+			<h4 class="text-primary" style="text-align:center;">Please fill out form below:</h4>
+
+			<hr>
+
+			<!-- Main Input For Receiving Query to our ML -->
+			<form action="{{ url_for('predict')}}"method="post" style="padding-left: 0">
+				<fieldset style="float:left;height: 390px;">
+					
+					<!-- Number of Children -->
+					<p><label for="children"><b>Number of Children:</b></label>&nbsp
+					<input type="number" name="cnt_children" placeholder="for none, type 0" required="required" /></p>
+
+					<!-- Income -->
+					<p><label for="income"><b>Income (USD):</b></label>&nbsp
+					<input type="number" name="amt_income_total" placeholder="no comma (ex 50000)" required="required"/></p>
+
+					<!-- Number of Family Members -->
+					<p><label for="family_members"><b>Family Size:</b></label>&nbsp
+						<input type="number" name="cnt_fam_members" placeholder="(including yourself)" required="required" /></p>
+
+					<!-- Gender (F)-->
+					<p><b>Gender:</b>&nbsp
+					<input type="radio" id="female" name="code_gender_M" value=0 required="required" />
+					<label for="female">Female</label>&nbsp
+					<!-- Gender (M)-->
+					<input type="radio" id="male" name="code_gender_M" value=1 required="required" />
+					<label for="male">Male</label></p>
+
+					<!-- Own Car (N)-->
+					<p><b>Own Car:</b>&nbsp
+					<input type="radio" id="no" name="flag_own_car_Y" value=0 required="required" />
+					<label for="car">No</label>&nbsp
+					<!-- Own Car (Y)-->
+					<input type="radio" id="no" name="flag_own_car_Y" value=1 required="required" />
+					<label for="male">Yes</label></p>
+				
+					<!-- Own Realty (N)-->
+					<p></p><b>Own Realty:</b>&nbsp
+					<input type="radio" id="no" name="flag_own_realty_Y" value=0 required="required" />
+					<label for="no">No</label>&nbsp
+					<!-- Own Realty (Y)-->
+					<input type="radio" id="yes" name="flag_own_realty_Y" value=1 required="required" />
+					<label for="yes">Yes</label></p>
+					
+					<br>
+
+					<button type="submit" class="btn btn-primary btn-block btn-large"><b>PREDICT</b></button>	
+
+				</fieldset>
+			</form>
+		</div>
+
+		<br><br>
 	</div>
  </div>
 
