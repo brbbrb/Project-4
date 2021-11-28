@@ -8,6 +8,9 @@ Due to COVID-19, many people have lost their jobs, resulting in people strapping
 
 To address this issue, we can predict potential default accounts based on certain attributes. The idea is that the earlier the potential default accounts are detected, the lower the losses we will embrace. On the other hand, we can be proactive by providing tips to customers to prevent default. This not only protects our customers but also minimizes our risks and potential losses.
 
+## Background
+Applying for a credit card can be intimidating for some people. Many applications ask for your social security number and your credit may get hit with a hard inquiry. We wanted to use a machine learning model remove this friction.
+
 
 ## Goal
 To predict whether the customer will default on their credit card payment next month.
@@ -19,7 +22,6 @@ There are times when even a seemingly manageable debt, such as credit cards, goe
 A lot of us would be able to relate to this scenario. We may have missed credit card payments once or twice because of forgotten due dates or cash flow issues. But what happens when this continues for months? How to predict if a customer will be defaulter in next months?
 
 To reduce the risk of Banks, this model has been developed to predict customer defaulter based on demographic data like gender, age, marital status and behavioral data like last payments, past transactions etc.
-
 
 
 
