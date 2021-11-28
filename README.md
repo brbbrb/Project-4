@@ -25,10 +25,9 @@ To reduce the risk of Banks, this model has been developed to predict customer d
 
 ## **Technologies**
 
-- Python (Jupyter Notebook, Pandas)
+- Python (Jupyter Notebook, Pandas, numpy, sklearn, matplotlib)
 - Flask 
 - SQL/ Postgres DB
-- JavaScript Libraries 
 - HTML/ CSS (Bootstrap)
 - Csv
 - Machine Learning
