@@ -1,5 +1,5 @@
 # Project-4
-Link to our site: cc-approval.herokuapp.com/predict
+Link to our site: http://cc-approval.herokuapp.com/
 
 
 ## Overview
