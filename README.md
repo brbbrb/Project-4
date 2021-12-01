@@ -8,6 +8,19 @@ Due to COVID-19, many people have lost their jobs, resulting in people strapping
 
 To address this issue, we can predict potential default accounts based on certain attributes. The idea is that the earlier the potential default accounts are detected, the lower the losses we will embrace. On the other hand, we can be proactive by providing tips to customers to prevent default. This not only protects our customers but also minimizes our risks and potential losses.
 
+-Background
+-Goal
+-Technologies and Data Source
+-Process
+-Model Usage
+-Data Preparation and Overview
+-Machine Learning
+-Feature Selection
+-Website
+-Limitations
+- Conclusion
+
+
 ## Background
 Applying for a credit card can be intimidating for some people. Many applications ask for your social security number and your credit may get hit with a hard inquiry. We wanted to use a machine learning model remove this friction.
 
@@ -26,7 +39,6 @@ To reduce the risk of Banks, this model has been developed to predict customer d
 
 
 ## **Technologies**
-
 - Python (Jupyter Notebook, Pandas, numpy, sklearn, matplotlib)
 - Flask 
 - SQL/ Postgres DB
