@@ -86,7 +86,7 @@ This graph shows the total income distribution in our dataset. This total income
 Male vs female was also a major feature in our dataset and machine learning model. As you can see, a vast majority of our dataset is women, coming it at 67%.
 [![male-vs-female.png](https://i.postimg.cc/Pr8VsKD8/male-vs-female.png)](https://postimg.cc/HVd9bwBp)
 
-## **Website** 📰
+## **Website** 🖥
 
 Our website starts by asking you to fill out basic information such as Number of children, household income, family size, etc. Based on all of these inputs, our machine learning model then computes whether or not you're likely to be accepted for a new credit card.
 
