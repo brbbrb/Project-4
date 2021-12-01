@@ -92,7 +92,7 @@ Our website starts by asking you to fill out basic information such as Number of
 
 ![Alt Text](https://media.giphy.com/media/WAm5zjmtgwncqmGpf9/giphy.gif)
 
-<img src="https://media.giphy.com/media/WAm5zjmtgwncqmGpf9/giphy.gif" height="700">
+<img src="https://media.giphy.com/media/WAm5zjmtgwncqmGpf9/giphy.gif" height="500">
 
 Our next page then shows the output result of our machine learning model, based on what the inputs were. The outcome will either say "The credit card application is likely to be DENIED*", or "The credit card application is likely to be APPROVED*". We put in the asterisk to let people know that this result is based on a machine learning model, and not always 100% accurate.
 
