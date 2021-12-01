@@ -3,21 +3,21 @@ Link to our site: http://cc-approval.herokuapp.com/
 
 
 ## **Overview** 👇
-Due to COVID-19, many people have lost their jobs, resulting in people strapping for cash and defaulting on their credit card payments. Things have gotten so bad that credit card companies, such as JP Morgan and Citigroup have to set aside an additional reserve to cover their losses from credit card defaults¹. Now, this is a very extreme case, which does not happen often (I really hope not). People’s inability to pay for their credit card bills could be due to different circumstances. However, when it’s deliberate, meaning that customers have no plans in paying the bank back, it would be considered as a fraud. Either way, this imposes a huge risk on the credit card companies and we need to find a way to flag them.
+Due to COVID-19, many people have lost their jobs, resulting in some strapping for cash and defaulting on their credit card payments. Things have gotten so bad that credit card companies, such as JP Morgan and Citigroup have to set aside an additional reserve to cover their losses from credit card defaults. People’s inability to pay for their credit card bills could be due to different circumstances. However, when it’s deliberate, meaning that customers have no plans in paying the bank back, it would be considered fraud. Either way, this imposes a huge risk on the credit card companies and we need to find a way to flag possible offenders.
 
 
-To address this issue, we can predict potential default accounts based on certain attributes. The idea is that the earlier the potential default accounts are detected, the lower the losses we will embrace. On the other hand, we can be proactive by providing tips to customers to prevent default. This not only protects our customers but also minimizes our risks and potential losses.
+To address this issue, we created a machine learning model that can predict potential default accounts based on certain attributes. The idea is that the earlier the potential default accounts are detected, the lower the losses we will embrace. On the other hand, we can be proactive by providing tips to customers to prevent default. This not only protects our customers but also minimizes our risks and potential losses.
 
--Background
--Goal
--Technologies and Data Source
--Process
--Model Usage
--Data Preparation and Overview
--Machine Learning
--Feature Selection
--Website
--Limitations
+- Background
+- Goal
+- Technologies and Data Source
+- Process
+- Model Usage
+- Data Preparation and Overview
+- Machine Learning
+- eature Selection
+- Website
+- Limitations
 - Conclusion
 
 
@@ -26,7 +26,7 @@ Applying for a credit card can be intimidating for some people. Many application
 
 
 ## **Goal** 🏁
-To predict whether the customer will default on their credit card payment next month.
+To predict whether a credit card applicant will be approved or denied.
 
 
 ## **Motivation** 💰
@@ -53,7 +53,8 @@ To reduce the risk of Banks, this model has been developed to predict customer d
 ![image](https://img.shields.io/badge/technologies-SKLearn-blue)
 
 
-These are the steps: 
+## **Process** ⚙️
+
 1. Data Cleaning
     - Removing extraneous columns
     - Null values
@@ -65,6 +66,7 @@ These are the steps:
 5. Scaling the data – StandScaler & MinMaxScaler
 6. Model Selection & Prediction 
 7. Exported the model -> Flask implementation
+8. Heroku deployment
 
 ## **Archetictural Diagram** 🔧
 
@@ -90,13 +92,15 @@ Our website starts by asking you to fill out basic information such as Number of
 
 ![Alt Text](https://media.giphy.com/media/WAm5zjmtgwncqmGpf9/giphy.gif)
 
+<img src="https://media.giphy.com/media/WAm5zjmtgwncqmGpf9/giphy.gif" height="100">
+
 Our next page then shows the output result of our machine learning model, based on what the inputs were. The outcome will either say "The credit card application is likely to be DENIED*", or "The credit card application is likely to be APPROVED*". We put in the asterisk to let people know that this result is based on a machine learning model, and not always 100% accurate.
 
 
 
 
-## **Contributors** 👧👦👨👨
-- [Marie Prosper](https://github.com/marieprosper77)
+## **Contributors** 👨👨👨👩
 - [Bradley Barker](https://github.com/brbbrb)
 - [Cody Gardner](https://github.com/cgardner1388)
 - [David Owens](https://github.com/dowens1186)
+- [Marie Prosper](https://github.com/marieprosper77)
