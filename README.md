@@ -68,7 +68,7 @@ To reduce the risk of Banks, this model has been developed to predict customer d
 7. Exported the model -> Flask implementation
 8. Heroku deployment
 
-## **Archetictural Diagram** 🔧
+## **Architectural Diagram** 🔧
 
 This flow chart is a big picture view of how our website works. At the top, the data scientist transforms the data in SQL, and then uses jupyter notebook to scale the data and develop the model. The model is then saved into an open source Java Database, or a .H2 file, that is loaded to the server. The user the accesses the server, and our flask app then loads the model for use on the website.
 
